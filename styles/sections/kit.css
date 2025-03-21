@@ -1,0 +1,206 @@
+#kit {
+    padding-top: 3rem;
+
+    & .kit-content {
+        width: 100%;
+        max-width: 75rem;
+        margin-inline: auto;
+
+        & .kit-header {
+            margin-bottom: 7.18rem;
+
+            & .kit-title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            & .kit-desc {
+                margin-top: -1rem;
+            }
+        }
+
+        & .kit-image {
+            text-align: center;
+            
+            & .kit-image-container {
+                width: 100%;
+
+                & .kit-image-content {
+                    width: 22.18rem;
+                    height: 31.56rem;
+                    margin-inline: auto;
+                    position: relative;
+
+                    & img:nth-child(1) {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 100;
+                    }
+
+                    & .book-cover {
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5rem;
+                        transform: translate(60%, 50%);
+                        animation-name: rotateCoverDesc;
+                        animation-timing-function: ease;
+                        animation-fill-mode: backwards;
+                        animation-timeline: view();
+                        animation-range: 30rem 100%;
+
+                        & span {
+                            transform: translate(-50%);
+                        }
+                    }
+
+                    & .bookmarkers {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        & img.bookmark {
+                            width: 10.75rem;
+                            height: 30.56rem;
+                            position: absolute;
+                            right: 0;
+                            top: .25rem;
+
+                            &:nth-child(1) {
+                                z-index: 90;
+                                left: auto;
+                                animation-name: rotateMarkers;
+                                animation-timing-function: ease;
+                                animation-fill-mode: both;
+                                animation-timeline: view();
+                                animation-range: 25% 60%;
+                            }
+    
+                            &:nth-child(2) {
+                                z-index: 80;
+                                animation-name: rotateMarkers2;
+                                animation-timing-function: ease;
+                                animation-fill-mode: both;
+                                animation-timeline: view();
+                                animation-range: 25% 60%;
+                            }
+                        }
+
+                        & .bookmarkers-desc {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                            position: absolute;
+                            bottom: 3rem;
+                            right: 0;
+                            animation-name: rotateMarkersDesc;
+                            animation-timing-function: ease;
+                            animation-fill-mode: both;
+                            animation-timeline: view();
+                            animation-range: 20% 40%;
+
+                            & img {
+                                width: 145px;
+                                height: 152px;
+                                position: relative;
+                            }
+
+                            & span {
+                                transform: translate(-50%, -.5rem);
+                            }
+                        }
+                    }
+
+                    & .book-brooch {
+                        position: relative;
+                        transform: translate(3rem, -25rem);
+                        animation-name: rotatePin;
+                        animation-timing-function: ease;
+                        animation-fill-mode: both;
+                        animation-timeline: view();
+                        animation-range: 10% 40%;
+
+                        & .book-brooch-desc {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 1rem;
+
+                            & img {
+                                width: 105px;
+                                height: 127px;
+                            }
+
+                            span {
+                                transform: translateX(-10%);
+                            }
+                        }
+
+                        & > img {
+                            width: 222px;
+                            height: 254px;
+                            position: absolute;
+                            transform: translate(-9rem, -3rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotateMarkers {
+    50% {
+        transform: translate(5.9rem, -6.7rem);
+        rotate: 13deg;
+    }
+    100% {
+        transform: translate(5.7rem, -6.5rem);
+        rotate: 13deg;
+    }
+}
+
+@keyframes rotateMarkers2 {
+    50% {
+        transform: translate(13.2rem, -4.7rem);
+        rotate: 22.8deg;
+    }
+    100% {
+        transform: translate(13rem, -4.5rem);
+        rotate: 22deg;
+    }
+}
+
+@keyframes rotateMarkersDesc {
+    50% {
+        transform: translate(13.2rem, 11.5rem);
+    }
+
+    100% {
+        transform: translate(13rem, 11.3rem);
+    }
+}
+
+@keyframes rotateCoverDesc {
+    50% {
+        transform: translate(-9.7rem, -3.7rem);
+    }
+
+    100% {
+        transform: translate(-9.5rem, -3.5rem);
+    }
+}
+
+@keyframes rotatePin {
+    50% {
+        transform: translate(-12.2rem, -18rem);
+    }
+
+    100% {
+        transform: translate(-12rem, -18.2rem);
+    }
+}

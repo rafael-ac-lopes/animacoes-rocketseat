@@ -1,0 +1,37 @@
+header {
+    width: 100%;
+    max-width: 70rem;
+    margin-top: 3.5rem;
+    margin-inline: auto;
+
+    & .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .logo {
+            width: 14.375rem;
+            height: 3.625rem;
+            background-image: url('../assets/icons/logo-horizontal.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    
+        & .btn {
+            font: var(--button);
+            color: var(--text-title);
+            padding-block: .75rem;
+            padding-inline: 1.25rem;
+            background-color: var(--pink-dark);
+            border-radius: .5rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                background-color: var(--pink-light);
+            }
+        }
+    }
+}

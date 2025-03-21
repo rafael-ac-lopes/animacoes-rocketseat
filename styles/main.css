@@ -1,0 +1,14 @@
+@import url('./sections/hero.css');
+@import url('./sections/desc.css');
+@import url('./sections/kit.css');
+@import url('./sections/pricing.css');
+
+main {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    & section {
+        min-height: 100vh;
+    }
+}
