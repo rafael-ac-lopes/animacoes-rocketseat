@@ -40,5 +40,25 @@ footer {
                 }
             }
         }
+
+        & .footer-nav {
+            display: flex;
+            gap: 3.5rem;
+
+            & ul {
+                margin-top: 1.25rem;
+                display: flex;
+                flex-direction: column;
+                gap: .75rem;
+
+                & li a {
+                    transition: color .3s ease;
+
+                    &:hover {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
     }
 }
